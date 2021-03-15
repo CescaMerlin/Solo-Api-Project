@@ -29,8 +29,8 @@ const typeDefs = gql`
   }
 
   type Query {
-    getAllBirds: [Bird]
-    getBird(name: String, scientificName: String): Bird
+    GetAllBirds: [Bird]
+    GetBird(name: String, scientificName: String): Bird
   }
 
 `;
