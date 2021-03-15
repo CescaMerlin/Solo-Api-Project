@@ -1,4 +1,5 @@
-const knex = require('knex')({
+require("dotenv").config();
+const dbConfig = {
     client: 'pg', //this is the postgres client
     connection: {
         host: '127.0.0.1', //this is localhost
@@ -12,6 +13,6 @@ const knex = require('knex')({
     seeds: {
         directory: __dirname + '/database/seeds',
     }
-});
+};
 
-module.exports = knex; 
+module.exports = dbConfig; 

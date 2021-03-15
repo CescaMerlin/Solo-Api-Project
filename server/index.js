@@ -1,7 +1,19 @@
 const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
-require("dotenv").config;
+const Knex = require('knex');
+const { migrateDB } = require('graphql-migrations');
+const { createKnexDbProvider } = require("@graphback/runtime-knex");
+const dbConfig = require("../knexfile.js");
+
+//create the connection to the database
+const db = Knex(dbConfig);
+
+//create the table in the database
+migrateDB(dbConfig, typeDefs, { }).then(() => {console.log("Migrated database");});
+
+//create the postgres data provider
+const dataProviderCreator = createKnexDbProvider(db);
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
