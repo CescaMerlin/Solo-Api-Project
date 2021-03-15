@@ -24,13 +24,7 @@ Summary
     Challenges and Struggles Faced
 
 Requirements
-
-    An Express server that:
-
-    has a create endpoint for adding to your database (POST)
-    has a read endpoint for reading from your database (GET)
-    has an update endpoint for editing to your database (PATCH/PUT)
-    has a delete endpoint for deleting from your database (DELETE)
+    (chose not to do express)
 
     OR a GraphQL Server that:
 
@@ -39,7 +33,7 @@ Requirements
     Offers mutations to delete, add, or modify data
 
     A basic HTML file that gets served up. It should have the name of your API and link to your API's GitHub folder
-    Migration files
+    Migration files  --> not necessary with graphback/graphql migrations api
     A script that will set up and seed a database
     API Documentation in the form of a README.md file https://github.com/matiassingers/awesome-readme
 

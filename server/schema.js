@@ -1,6 +1,4 @@
-//const { gql } = require("apollo-server");
-
-const typeDefs = `
+const schema = `
   # Your schema goes here.
   # The schema should model the full data object available!
   
@@ -35,7 +33,6 @@ const typeDefs = `
     continent: [String!]
     area: [String]
     climate: [String]
-    native: [Bird]
   }
 
   """
@@ -52,23 +49,6 @@ const typeDefs = `
     url: String
   }
 
-  type Query {
-    findBirds(filter: BirdFilter, orderBy: OrderByInput): BirdResultList!
-    getBird(name: String, scientificName: String): Bird
-  }
-
-  type Mutation {
-    addBird(input: CreateBirdInput!): Bird
-    addImage(input: CreateImageInput!): Image
-    addRegion(input: CreateRegionInput!): Region
-    updateBird(input: MutateBirdInput!): Bird
-    updateImage(input: MutateImageInput!): Image
-    updateRegion(input: MutateRegionInput!): Region
-    deleteBird(input: MutateBirdInput!): Bird
-    deleteImage(input: MutateImageInput!): Image
-    deleteRegion(input: MutateRegionInput!): Region
-  }
-
 `;
 
-module.exports = typeDefs;
+module.exports = schema;
