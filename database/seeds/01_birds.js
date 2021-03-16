@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('bird').insert([
-        {id: 1, category: 'Owl', scientificName: 'tyto alba'},
-        {id: 2, category: 'Falcon', scientificName: 'falco peregrinus'},
-        {id: 3, category: 'Eagle', scientificName: 'aquila'}
+        {category: 'Owl', scientificName: 'tyto alba', name: 'Barn Owl', activity: 'nocturnal', brood: 5},
+        {category: 'Falcon', scientificName: 'falco peregrinus', name: 'Peregrine Falcon', activity: 'diurnal', brood: 3},
+        {category: 'Eagle', scientificName: 'aquila', name: 'Golden Eagle', activity: 'diurnal', brood: 3}
       ]);
     });
 };

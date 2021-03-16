@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/CescaMerlin/Solo-Api-Project#readme",
   "dependencies": {
+    "@apollo/client": "^3.3.11",
     "@graphback/runtime-knex": "^1.1.2",
     "apollo-server": "^2.21.1",
     "dotenv": "^8.2.0",
@@ -31,6 +32,7 @@
     "graphql-migrations": "^1.1.2",
     "knex": "^0.95.2",
     "nodemon": "^2.0.7",
-    "pg": "^8.5.1"
+    "pg": "^8.5.1",
+    "react": "^17.0.1"
   }
 }
